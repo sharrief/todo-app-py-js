@@ -1,20 +1,22 @@
-import express, { Request, Response } from 'express'
-import { Todo } from '@/todo/models'
+import express from 'express'
+import { add, all, remove, update } from '@/todo/routes';
+import { AppDataSource } from '@/todo_project/settings';
+
+AppDataSource.initialize()
 
 const app = express()
 const port = 3000
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!')
-})
+// app.use(handler) means the handler is run for every request to the server
 
-app.get('/sample', async (req: Request, res: Response) => {
-  const todo = new Todo();
-  todo.title = 'My First Todo'
-  todo.details = 'Step 1... there is no step 1'
-  todo.date = Date.now()
-  res.send(todo)
-})
+// express.json() is route handler middleware to parse JSON in request body and serialize response objects to JSON
+app.use(express.json());
+
+app.use(express.static('public'))
+app.get('/all', all)
+app.post('/add', add)
+app.post('/update', update)
+app.post('/delete', remove)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
