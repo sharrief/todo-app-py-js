@@ -5,6 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "npx ts-node -r tsconfig-paths/register index.ts",
+    "bundle": "npx tsc ./todo/browser/page.tsx --outDir ./public --typeRoots ./todo/browser --lib esnext,dom --target esnext",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

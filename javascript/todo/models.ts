@@ -1,7 +1,8 @@
+import { ITodo } from "@/todo/browser/types"
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from "typeorm"
 
 @Entity()
-export class Todo extends BaseEntity {
+export class Todo extends BaseEntity implements ITodo {
   @PrimaryGeneratedColumn()
   id: number
 

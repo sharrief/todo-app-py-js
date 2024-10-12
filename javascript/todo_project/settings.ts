@@ -3,7 +3,7 @@ import { Todo } from "@/todo/models";
 
 export const AppDataSource = new DataSource({
   type: "sqlite",
-  database: "todo_db",
+  database: "db.sqlite3",
   synchronize: true,
   logging: true,
   entities: [Todo],
