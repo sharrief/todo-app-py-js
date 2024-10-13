@@ -1,4 +1,4 @@
-import { ITodo } from "@/todo/browser/types"
+import { ITodo } from "@/todo/types"
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from "typeorm"
 
 @Entity()
