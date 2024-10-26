@@ -1,4 +1,6 @@
 **/__pycache__/
 .DS_Store
 **/node_modules/
+**/.next/
+*.db
 javascript/public/*.js
