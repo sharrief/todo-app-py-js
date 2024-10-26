@@ -2,7 +2,7 @@
   "scripts": {
     "javascript": "cd javascript && npm install && npm run start",
     "python": "cd python && bash -c 'pip install virtualenv && virtualenv venv && source venv/bin/activate && pip install django && pip install django-crispy-forms && pip install crispy-bootstrap4 && python manage.py runserver 3000'",
-    "nextjs": "cd react-nextjs && npm install && npm run dev",
+    "react": "cd react && npm install && npm run dev",
     "test": "cd cheatsheets && npm install && npm run test"
   }
 }
