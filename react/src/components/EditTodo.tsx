@@ -45,16 +45,26 @@ export default function EditTodo(props: {todo?: Todo}) {
 
     <div className="container mb-3">
       <form id="add-todo-form" action="#" onSubmit={(e) => { e.preventDefault(); saveTodo() }}>
+      <div>
+        <label className=" requiredField">Title</label>
         <input name="title" 
+          className="textinput form-control"
           value={title} 
           onChange={(e) => setNewTitle(e.target.value)}
           placeholder="Title"
         />
-        <input name="details" 
+      </div>
+      <div>
+        <label className=" requiredField">Details</label>
+        <textarea name="details" 
+           className="textarea form-control" 
+           rows={10}
+           cols={40}
           value={details} 
           onChange={(e) => setNewDetails(e.target.value)}
           placeholder="Details"
         />
+      </div>
         <button type="submit" name="button">{saveTodoLabel}</button>
       </form>
     </div>

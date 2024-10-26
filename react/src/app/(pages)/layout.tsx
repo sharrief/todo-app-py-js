@@ -24,7 +24,7 @@ export default function RootLayout({
         <header className="header fixed-top">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-              <a href="/home" className=" navbar-brand">
+              <a href="/" className=" navbar-brand">
                 <span>Todo app</span>
               </a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

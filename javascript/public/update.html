@@ -6,9 +6,15 @@
   <div class="container mb-3">
     <form id="add-todo-form" action="#">
       <h3 id="todo-id"></h3>
-      <input name="title" />
-      <input name="details" />
-      <button type="submit" name="button">Save</button>
+      <div>
+        <label class=" requiredField">Title</label>
+        <input name="title" class="textinput form-control" />
+      </div>
+      <div>
+        <label class=" requiredField">Details</label>
+        <textarea name="details" class="textarea form-control" rows="10" cols="40"></textarea>
+      </div>
+      <button type="submit" name="button">Update</button>
     </form>
   </div>
 </div>
