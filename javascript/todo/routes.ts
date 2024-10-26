@@ -44,11 +44,3 @@ export async function remove(req: Request<{ id: string }>, res: Response) {
     res.send(`Could not find a todo with id ${id}:`)
   }
 }
-
-const router = Router()
-router.get('/all', all)
-router.put('/add', add)
-router.patch('/update', update)
-router.delete('/delete/:id', remove)
-router.get('/:id', getById)
-export default router
