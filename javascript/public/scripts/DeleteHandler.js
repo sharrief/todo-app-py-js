@@ -12,12 +12,15 @@ const DeleteHandler = {
       if (res.ok) {
         const message = await res.text()
         console.log(message)
+      } else {
+        throw new Error(`Could not delete todo #${id}`)
       }
       console.groupEnd()
-      window.location.reload()
+      return true
     } catch (e) {
       console.error(e)
       alert(e.message)
+      return false
     }
   }
 }

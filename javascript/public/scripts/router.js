@@ -12,10 +12,10 @@
     script.src = '/scripts/' + path + '.js'
     script.defer = true
       
-      const homePageResponse = await fetch(`/${path}.html`)
-      const homePageString = await homePageResponse.text()
-      container.innerHTML = homePageString;
-      document.head.appendChild(script)
+    const homePageResponse = await fetch(`/${path}.html`)
+    const homePageString = await homePageResponse.text()
+    container.innerHTML = homePageString;
+    document.head.appendChild(script)
   }
   const validPaths = new Set(['','add','update'])
   const [_,path,_id] = pathname.split('/') 

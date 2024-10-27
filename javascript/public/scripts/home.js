@@ -39,12 +39,17 @@
     setTextContent('.todo-date', dateString + " " + date.toLocaleTimeString())
 
     const deleteButton = row.querySelector('.delete-todo')
-    deleteButton.addEventListener('click', () => DeleteHandler.delete(todo.id))
+    deleteButton.addEventListener('click', async function deleteClicked() {
+      const deleteSuccessful = await DeleteHandler.delete(todo.id)
+      if (deleteSuccessful) {
+        row.remove()
+      }
+    })
 
     const updateButton = row.querySelector('.update-todo')
     updateButton.setAttribute('href', `/update/${todo.id}`)
 
     todoList?.append(row)
   })
-  
+
 })()

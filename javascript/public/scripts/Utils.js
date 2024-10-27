@@ -1,5 +1,4 @@
-// @ts-check
-const Utils = ({
+const Utils = {
   getEl(id) {
     return document.getElementById(id);
   },
@@ -10,8 +9,9 @@ const Utils = ({
    */
   el(tag) {
     return document.createElement(tag);
-  },
-  selectEl(el, selector) {
-    return el.querySelector(selector)
   }
-})
+}
+
+Utils.selectEl = function(el, selector) {
+  return el.querySelector(selector)
+}

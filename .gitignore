@@ -3,4 +3,5 @@
 **/node_modules/
 **/.next/
 *.db
+*.sqlite3
 javascript/public/*.js

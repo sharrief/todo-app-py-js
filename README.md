@@ -24,12 +24,24 @@ For ease of use, a container with python and nodejs installed is configured in `
   - `npm run javascript` http://localhost:3001
   - `npm run react` http://localhost:3002
 
+## A guided tour
+This tour highlights the main concepts with short explainers at each step.
+
+1. [Loading JS](/guided-tour/loading-JS.md)
+1. [The DOM](/guided-tour/the-dom.md)
+1. [Interactivity](/guided-tour/interactivity.md)
+1. [Routing](/guided-tour/routing.md)
+1. [Fetching data](/guided-tour/fetching-data.md)
+1. [NextJS project structure (TBD)]()
+1. [React components (TBD)]()
+1. [React hooks (TBD)]()
+
 ## Suggested exploration path
 The apps were built primarily to introduce JavaScript and React to an experienced Python & Django developer. The `/javascript` app exists primarily to show front-end fundamentals which are hidden by higher level abstractions like React and NextJS.
 
 The suggested exploration path is to get familiar with the [`/python`](/python) app then compare fundamental differences between the python app and the javascript app.
-  
-## A-B comparisons
+
+## A-B funcionality comparisons
  
 | Functionality | Python                                   | Vanilla JS | React | Notes
 | ------------- | ------                                   | ---------- | ----- | ----- |
