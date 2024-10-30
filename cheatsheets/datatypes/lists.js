@@ -18,6 +18,9 @@ console.log(rest); // '3, 4, 5'
 // Accessing the last element is a pain without popping the array
 const last = nums[nums.length - 1];
 
+const SixToTen = [6, 7, 8, 9, 10];
+const OneToTen = [...nums, ...SixToTen]; // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 // Iterating
 // for loops use 'of' to access values...
 for (let num of nums) {
@@ -40,3 +43,11 @@ nums.forEach((num, index) => console.log(num + index)); // 1, 3, 5, 7, 9
 const sum = nums.reduce((total, current) => total + current); // 15
 const squares = nums.map((num) => num ** 2); // [ 1, 4, 9, 16, 25 ]
 const notOdds = squares.filter((num) => num % 2 === 0); // [ 4, 16 ]
+const evenNum = nums.find((num) => num % 2 === 0); // 4
+const over21 = nums.some((num) => num > 21); // true
+const allOver21 = nums.every((num) => num > 21); // false
+
+function countArgs(...args) {
+  console.log(args.length);
+}
+countArgs(1, 2, 3, 4, 5); // 5

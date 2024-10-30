@@ -23,18 +23,18 @@ obj[3]; // undefined
 
 // Its easier to get the size of a Map
 map.size; // 3
-Object.getOwnPropertyNames(obj).length; // 3
+Object.keys(obj).length; // 3
 
 // And access the keys
 map.keys(); // Iterator [0, 1, 'two']
-Object.getOwnPropertyNames(obj); // ['0', '1', 'two']
+Object.keys(obj); // ['0', '1', 'two']
 
 // And iterate over the values
 // Maps/Sets maintain insertion order in JS
 for ([key, value] of map) {
   console.log(key, value);
 }
-for (key of Object.getOwnPropertyNames(obj)) {
+for (key in obj) {
   const value = obj[key];
   console.log(key, value);
 }

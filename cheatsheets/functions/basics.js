@@ -10,17 +10,18 @@ const printName2 = function (name) {
 const printName3 = (name) => {
   console.log(name);
 };
-// You can omit the brackets and return for arrow functions with one expression
-const getFancyName = (name) => `✨${name}✨`;
+// You can omit the parens around args. 
+// You can omit brackets around the block and return for arrow functions with one expression
+const getFancyName = name => `✨${name}✨`;
 console.log(getFancyName("john")); // ✨john✨
 
-// Function declarations are expressions and can be invoked (aka IIFE)
+// Function declarations can be invoked (aka IIFE)
 function printName4(name) {
   console.log(name);
 }
 ("john");
-
-((name) => console.log(name))("john");
+// Function expressions and can be invoked (aka IIFE)
+(name => console.log(name))("john");
 
 // More useful when you want encapsulate logic/behavior
 const date = new Date();
