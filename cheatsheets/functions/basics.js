@@ -42,9 +42,9 @@ function printNums(first, second, ...rest) {
 
 // there are no keyword arguments in JS
 // you can use object destructuring to simulate them
-function printPerson({ firstName, age }) {
-  console.log(firstName, age);
+function printPerson({ firstName, age, greeting = 'hello' }) {
+  console.log(firstName, age, greeting);
 }
 const firstName = 'john'
 const age = 30
-printPerson({ firstName, age });
+printPerson({ firstName, age }); // john 30 hello
