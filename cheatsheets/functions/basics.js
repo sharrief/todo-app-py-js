@@ -6,6 +6,7 @@ function printName(name) {
 const printName2 = function (name) {
   console.log(name);
 };
+
 // Also usually the same as this "arrow" function, as long as you don't reference `this`
 const printName3 = (name) => {
   console.log(name);
@@ -16,10 +17,9 @@ const getFancyName = name => `✨${name}✨`;
 console.log(getFancyName("john")); // ✨john✨
 
 // Function declarations can be invoked (aka IIFE)
-function printName4(name) {
+(function(name) {
   console.log(name);
-}
-("john");
+})("john");
 // Function expressions and can be invoked (aka IIFE)
 (name => console.log(name))("john");
 
@@ -31,3 +31,20 @@ const displayDate = (() => {
   const year = date.year();
   return month + " " + day + " " + year;
 })();
+
+// using ... in function arguments is called "rest" syntax
+// it accumulates the rest of the positional arguments into an array
+function printNums(first, second, ...rest) {
+  console.log(first);
+  console.log(second);
+  rest.forEach((num) => console.log(num));
+}
+
+// there are no keyword arguments in JS
+// you can use object destructuring to simulate them
+function printPerson({ firstName, age }) {
+  console.log(firstName, age);
+}
+const firstName = 'john'
+const age = 30
+printPerson({ firstName, age });

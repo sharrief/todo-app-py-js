@@ -1,16 +1,17 @@
 const array = [];
-array.push("two"); // 1
-array.unshift("one"); // 2
+array.push("two"); // returns the length of the array, 1
+array.unshift("one"); // pushes to the front of the array, returns the length of the array, 2
 array[3] = "three";
 array.pop(); // 'three'
-array.shift(); // 'one'
+array.shift(); // pops from the front, returns the element, 'one'
 array.length; // 1
 
 // Python "unpacking" is more robust than "destructuring" in JS
 // There is no dedicated Tuple type in JS
-// TS adds type support for using Arrays as Tuples
+// TS adds type support for using Arrays as Tuples (not shown here)
 // You can destructure positional elements
 const nums = [1, 2, 3, 4, 5];
+// using ... on the LHS is called "rest" syntax and accumulates the rest of the array elements or object properties 
 const [first, second, ...rest] = nums;
 console.log(first, second); // '1, 2'
 console.log(rest); // '3, 4, 5'
@@ -19,6 +20,7 @@ console.log(rest); // '3, 4, 5'
 const last = nums[nums.length - 1];
 
 const SixToTen = [6, 7, 8, 9, 10];
+// using ... on the RHS is called "spread" syntax and expands the array elements or object properties
 const OneToTen = [...nums, ...SixToTen]; // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // Iterating
