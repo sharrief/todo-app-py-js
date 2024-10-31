@@ -33,23 +33,35 @@ for (let index in nums) {
   console.log(index); // 0, 1, 2, 3, 4
 }
 
+// cannot use 'in' to check for values in an array
+9 in SixToTen; // false
+// but you can use 'includes'
+SixToTen.includes(9); // true
+// or indexOf
+SixToTen.indexOf(9); // 3
+SixToTen.indexOf(11); // -1, if not found
+
 // Quickly create dupes or sequences
 const ones = new Array(10).fill(1);
 const evens = Array.from({ length: 10 }, (_, idx) => idx * 2);
 
-// if you don't need to exit the loop early
-// or you want to run async functions in parallel
+// if you don't need to exit the loop early, you can use forEach
 nums.forEach((num, index) => console.log(num + index)); // 1, 3, 5, 7, 9
+
+// if you want run async functions in parallel you can use Promise.all
+async function pretendThisIsAsync(num) {
+  return num;
+}
+const promises = nums
+  // call to nums.map immdiately returns an array of promises
+  .map(async (num) => await pretendThisIsAsync(num))
+// Promise.all resolves when all promises are resolved
+const results = await Promise.all(promises);
 
 // map, reduce and filter work on Iterables like Arrays
 const sum = nums.reduce((total, current) => total + current); // 15
 const squares = nums.map((num) => num ** 2); // [ 1, 4, 9, 16, 25 ]
 const notOdds = squares.filter((num) => num % 2 === 0); // [ 4, 16 ]
 const evenNum = nums.find((num) => num % 2 === 0); // 4
-const over21 = nums.some((num) => num > 21); // true
+const someOver21 = nums.some((num) => num > 21); // true
 const allOver21 = nums.every((num) => num > 21); // false
-
-function countArgs(...args) {
-  console.log(args.length);
-}
-countArgs(1, 2, 3, 4, 5); // 5
