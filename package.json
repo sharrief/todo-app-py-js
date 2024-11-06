@@ -3,6 +3,10 @@
     "javascript": "cd javascript && npm install && npm run start",
     "python": "cd python && bash -c 'pip install virtualenv && virtualenv venv && source venv/bin/activate && pip install django && pip install django-crispy-forms && pip install crispy-bootstrap4 && python manage.py runserver 3000'",
     "react": "cd react && npm install && npm run dev",
-    "test": "cd cheatsheets && npm install && npm run test"
+    "test": "cd cheatsheets && npm install && npm run test",
+    "react-1": "node -r ./cheatsheets/react/useState-1.js",
+    "react-2": "node -r ./cheatsheets/react/useState-2.js",
+    "react-3": "node -r ./cheatsheets/react/useState-3.js",
+    "react-4": "node -r ./cheatsheets/react/useState-4.js"
   }
 }
