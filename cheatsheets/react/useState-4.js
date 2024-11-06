@@ -167,10 +167,9 @@ DateDisplay = function() {
   }
 }
 
-let input = ''
 output = (msg) => {
   console.clear()
-  process.stdout.write(`${msg}\n\r${input}`)
+  process.stdout.write(`${msg}\n\r`)
 }
 
 start = function userInterface() {
